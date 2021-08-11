@@ -5,7 +5,7 @@ function UseStateErrorEx() {
     const handleClick = () => {
         
         title = "My name is Obama";
-        console.log(title)
+        
     }
     return ( <React.Fragment>
         <h2>{title}</h2>
