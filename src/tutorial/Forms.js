@@ -1,6 +1,12 @@
 import React, {useState} from 'react'
 
 function Forms() {
+    const [firstName, setFirstName ] = useState("");
+    const [email,  setEmail ] = useState("");
+    const handleSubmit = (e) =>{
+        e.preventDefault(); //this is used to prevent default behavior of our browser
+        console.log("hello the people of the world")
+    }
     return (
         <>
         <article>
