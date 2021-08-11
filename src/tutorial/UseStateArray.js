@@ -4,11 +4,30 @@ import {data} from './data';
 
 
 function UseStateArray() {
-    const [people,setPeople] = React.useState({})
+    const [people,setPeople] = React.useState(data)
+
+    const remobeItem = (id) => {
+        let newPeople = people.filter((person) => person.id !== id);
+        setPeople(newPeople);
+    }
     return (
-        <div>
-            <h2>Use state array is in action</h2>
-        </div>
+       <>
+       {
+            people.map((person) => {
+                const {id, name} = person;
+
+                return (
+                    <div key={id} className ="item">
+                        <h4>{name}</h4>
+                        <button onClick={() => remobeItem(id)}> Remove Avengers</button>
+                    </div>
+                )
+            }
+            )}
+           <button className="btn" onClick={()  =>setPeople([])}>
+               Clear the Avengers
+           </button>
+       </>
     )
 }
 
