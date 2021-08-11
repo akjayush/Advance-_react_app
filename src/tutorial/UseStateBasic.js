@@ -3,8 +3,13 @@ import React , {useState} from 'react'
 function UseStateBasic() {
     const [day,setDAY] = useState("Today is rainy day") 
     const handleClick = () => {
+        if(day =="Today is rainy day :(") {
         setDAY("Today is a bright and beautiful day!!")
     }
+        else {
+            setDAY("Today is rainy day :(")
+        }
+        };
     return (
         <div>
             <>
